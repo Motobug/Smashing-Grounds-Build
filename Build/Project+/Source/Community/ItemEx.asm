@@ -1,6 +1,6 @@
 
 #################################################
-ItemEx Clone Engine v2.42 [Sammi Husky, Kapedani]
+ItemEx Clone Engine v2.5 [Sammi Husky, Kapedani]
 #################################################
 # Stages can override items
 # Character specific items
@@ -3241,6 +3241,42 @@ CODE @ $80056074
 }
 op andis. r5,r0,0xffe7 @ $806f1a50 # Set mayhem and passive aggression to false in Training
 op andis. r5,r4,0xffe1 @ $806dddc8 # Set mayhem and passive aggression to false in demo
+
+######################
+# Training Mode Menu #
+######################
+## TODO: Pokemon and Assist, preload ahead of time when on cursor, use R/L to cycle between lists?
+
+CODE @ $80104af4    # IfMinigameTraining::createModel
+{
+    stw r30, 0xEC(r27)  # Store pointer to table of items
+    li r12, 4           # \
+    divw r12, r31, r12  # | store number of items
+    stw r12, 0x2EC(r27) # /
+    b 0x4C
+}
+
+op b 0x2C @ $80105110   # IfMinigameTraining::startMelee   
+CODE @ $801059fc    # IfMinigameTraining::curPosProcItem
+{
+    mr r5, r31
+    b 0x28
+}
+CODE @ $80105a44    # IfMinigameTraining::curPosProcItem
+{
+    lwz r12, 0xEC(r29)  # \
+    mulli r11, r3, 0x4  # | get this->items[index]
+    lwzx r3, r12, r11   # /
+    b 0x20
+}
+
+op lhz r4, 0x132(r20) @ $80962248   # stOperatorInfoTraining::processBegin
+CODE @ $809622d8    # stOperatorInfoTraining::processBegin
+{
+    lhz	r21, 0x132(r20) # get itKind
+    lhz r22, 0x130(r20) # get itVariation
+    b 0x38
+}
 
 ## TODO: Infinite health and infinite bullets toggle part of more options
 # HOOK @ $80999fd8  # Infinite bullets
