@@ -5,6 +5,24 @@ del "..\Build\Project+\pf\movie" -Confirm:$false -Recurse -erroraction 'silently
 del "..\Build\Project+\pf\sound\netplaylist" -Confirm:$false -Recurse -erroraction 'silentlycontinue'
 del "..\Build\Project+\Source\Netplay" -Confirm:$false -Recurse -erroraction 'silentlycontinue'
 Move-Item "../stBackup/" -Destination "../Build/Project+/st/" -Force
+copy "../zssBackup/FitSZerosuit00.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit01.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit02.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit03.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit04.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit05.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit20.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit23.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit27.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit30.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit31.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit32.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit33.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit35.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit36.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+copy "../zssBackup/FitSZerosuit37.pac" -Destination "../Build/Project+/pf/fighter/szerosuit" -Force
+del "../zssBackup" -Confirm:$false -Recurse -erroraction 'silentlycontinue'
+
 
 #RSBE01.txt
 $rsbe01Path = "..\Build\Project+\RSBE01.txt"
