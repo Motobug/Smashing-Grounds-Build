@@ -355,8 +355,8 @@ Base: Dream_Land.param
 R: Dream_Land_R.param
 L: Dream_Land_L.param
 Z: Dream_Land_Z.param
+0x8000: Dream_Land_ML_00.param
 0x4000: Dream_Land_MR_00.param
-0xC000: Dream_Land_MR_00.param
 
 
 ################
@@ -538,21 +538,15 @@ Z: Golden_Temple_Z.param
 
 
 ################
-48.asl - 4 entries
+48.asl - 1 alt stage
 
-Base: Bell_Tower.param
-R: Bell_Tower_R.param
-L: Bell_Tower_L.param
-Z: Bell_Tower_Z.param
+Base: Tiny_FD.param
 
 
 ################
-49.asl - 4 entries
+49.asl - 1 alt stage
 
-Base: Ceres_Space_Colony.param
-R: Ceres_Space_Colony_R.param
-L: Ceres_Space_Colony_L.param
-Z: Ceres_Space_Colony_Z.param
+Base: Crateria.param
 
 
 ################
@@ -642,5 +636,29 @@ Base: Venom.param
 R: Venom_R.param
 L: Venom_L.param
 Z: Venom_Z.param
+
+
+################
+53.asl - 1 alt stage
+
+Base: Subcon.param
+
+
+################
+54.asl - 1 alt stage
+
+Base: Subcon.param
+
+
+################
+55.asl - 1 alt stage
+
+Base: Pictochat_Medley.param
+
+
+################
+56.asl - 1 alt stage
+
+Base: Yoshis_Island_PM.param
 
 
